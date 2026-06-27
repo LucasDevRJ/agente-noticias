@@ -1,16 +1,24 @@
 from news import buscar_noticias
 from summarizer import resumir_noticia
+from report import gerar_relatorio
 
+relatorio = ""
 resumos = []
 noticias = buscar_noticias()
 
 for noticia in noticias[:5]:
+
+    resumo = resumir_noticia(noticia)
+
     resumos.append(
         {
             "titulo": noticia.title,
-            "resumo": resumir_noticia(noticia),
+            "resumo": resumo,
             "link": noticia.link
         }
     )
-    
-print(resumos)
+
+    relatorio = gerar_relatorio(resumos)
+
+
+print(relatorio)
