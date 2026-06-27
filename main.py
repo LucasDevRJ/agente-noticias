@@ -1,6 +1,7 @@
 from news import buscar_noticias
 from summarizer import resumir_noticia
 from report import gerar_relatorio
+from agent_test import soma
 
 relatorio = ""
 resumos = []
