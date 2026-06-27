@@ -1,14 +1,11 @@
 from news import buscar_noticias
 from summarizer import resumir_noticia
 from report import gerar_relatorio
-from agent_test import soma
 
-relatorio = ""
 resumos = []
 noticias = buscar_noticias()
 
 for noticia in noticias[:5]:
-
     resumo = resumir_noticia(noticia)
 
     resumos.append(
@@ -19,7 +16,6 @@ for noticia in noticias[:5]:
         }
     )
 
-    relatorio = gerar_relatorio(resumos)
-
+relatorio = gerar_relatorio(resumos)
 
 print(relatorio)
